@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getAllCounts, contriSize } from './actions'
+import { getAllCounts} from './actions'
 var check = 0;
 
 function App() {
@@ -46,12 +46,6 @@ function App() {
         if (data.open_issues >= 50) {
           check++;
         }
-
-        contriSize(data.contributors_url).then((value) => {
-          if (value.length >= 10) {
-            check++;
-          }
-        })
 
         if (check >= 3) {
           let percent = (check * 100) / 6;
