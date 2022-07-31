@@ -20,6 +20,7 @@ function App() {
     e.preventDefault();
     const arr = link.split("/")
     console.log(arr)
+    setPercentage(0);
     //setLink("");
 
     getAllCounts(arr[3], arr[4]).then((data) => {
@@ -53,21 +54,24 @@ function App() {
         })
 
         if (check >= 3) {
-          let percent = (check * 100) / 5;
+          let percent = (check * 100) / 6;
           setPercentage(percent)
           setResult(true)
         }
         else if (check < 3) {
-          let per = (check * 100) / 5;
+          let per = (check * 100) / 6;
           setPercentage(per)
         }
         console.log(percentage)
 
         check = 0;
+        
 
 
       }
     })
+   
+    
 
   }
 
