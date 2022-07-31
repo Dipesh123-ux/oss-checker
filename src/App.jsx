@@ -53,12 +53,12 @@ function App() {
         })
 
         if (check >= 3) {
-          let percent = (check * 100) / 6;
+          let percent = (check * 100) / 5;
           setPercentage(percent)
           setResult(true)
         }
         else if (check < 3) {
-          let per = (check * 100) / 6;
+          let per = (check * 100) / 5;
           setPercentage(per)
         }
         console.log(percentage)
